@@ -1,19 +1,6 @@
 <?php
-/**
- * sagepay form
- *
- * @package paymentMethod
- * @copyright Copyright 2003-2017 Zen Cart Development Team
- * @copyright Portions Copyright 2003 osCommerce
- * @copyright Portions Copyright Nixak
- * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version $Id: Author: zcwilt  June 2017 New in v1.5.5 $
- */
 require_once(DIR_FS_CATALOG . DIR_WS_MODULES . 'payment/coinpayments/AbstractCoinpaymentsAPI.php');
 
-/**
- * Class sagepay_form
- */
 class coinpayments extends AbstractCoinpaymentsAPI
 {
     /**
@@ -21,11 +8,7 @@ class coinpayments extends AbstractCoinpaymentsAPI
      *
      * @var string
      */
-    var $code = 'coinpayments'; // SIM
-    /**
-     * @var array
-     */
-    protected $sagepayResponse;
+    var $code = 'coinpayments';
     /**
      * @var mixed|null
      */
