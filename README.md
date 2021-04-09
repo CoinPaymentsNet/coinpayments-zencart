@@ -10,6 +10,6 @@ In no event will CoinPayments Inc. or its directors, officers, employees, shareh
 
 # Coinpayments-ZenCart  
   
-#Installation:  
+# Installation:  
 =============  
 
