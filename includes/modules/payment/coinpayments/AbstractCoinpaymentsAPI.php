@@ -169,7 +169,7 @@ class AbstractCoinpaymentsAPI extends base
      */
     public function getNotificationUrl($client_id, $event)
     {
-        return zen_href_link(static::WEBHOOK_NOTIFICATION_URL, 'clientId='.$client_id . '&event='.$event, 'SSL', false);
+        return zen_catalog_base_link() . "coinpayments_callback.php?clientId=" . $client_id . "&amp;event=" . $event;
     }
 
     /**
