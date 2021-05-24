@@ -65,8 +65,8 @@ class coinpayments extends AbstractCoinpaymentsAPI
         if (defined('MODULE_PAYMENT_COINPAYMENTS_SORT_ORDER') && (int)MODULE_PAYMENT_COINPAYMENTS_ORDER_STATUS_ID_PREPARING > 0) {
             $this->order_status = MODULE_PAYMENT_COINPAYMENTS_ORDER_STATUS_ID_PREPARING;
         }
-        if ((int)$this->getModuleDefineValue('_ORDER_STATUS_ID') > 0) {
-            $this->order_status = $this->getModuleDefineValue('_ORDER_STATUS_ID');
+        if ((int)$this->getModuleDefineValue('_ORDER_STATUS_ID_PREPARING') > 0) {
+            $this->order_status = $this->getModuleDefineValue('_ORDER_STATUS_ID_PREPARING');
         }
         if (is_object($order)) {
             $this->update_status();
@@ -234,7 +234,7 @@ class coinpayments extends AbstractCoinpaymentsAPI
                     'cc_number' => $db->prepare_input($order->info['cc_number']),
                     'cc_expires' => $db->prepare_input($order->info['cc_expires']),
                     'date_purchased' => 'now()',
-                    'orders_status' => $db->prepare_input($order->info['order_status']),
+                    'orders_status' => $db->prepare_input($this->order_status),
                     'order_total' => $db->prepare_input($order->info['total']),
                     'order_tax' => $db->prepare_input($order->info['tax']),
                     'currency' => $db->prepare_input($order->info['currency']),
