@@ -432,6 +432,7 @@ EOD;
      */
     public function before_process()
     {
+        $_SESSION['cart']->reset(true);
         zen_redirect(zen_href_link(FILENAME_CHECKOUT_SUCCESS, '', 'SSL'));
         return false;
     }
