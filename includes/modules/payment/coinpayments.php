@@ -389,7 +389,7 @@ class coinpayments extends AbstractCoinpaymentsAPI
                 'display_value' => $display_value,
                 'billing_data' => $order->billing,
                 'notes_link' => sprintf(
-                    "http://zencart/%s/%s|Store name: %s|Order #%s", $adm_folder_name->fields['configuration_value'],
+                    HTTP_SERVER . "/%s/%s|Store name: %s|Order #%s", $adm_folder_name->fields['configuration_value'],
                     'index.php?cmd=orders&origin=index&oID=' . $order_id . '&action=edit',
                     STORE_NAME,
                     $order_id),
