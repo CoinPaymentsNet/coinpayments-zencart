@@ -388,6 +388,7 @@ class coinpayments extends AbstractCoinpaymentsAPI
                 'amount' => $amount,
                 'display_value' => $display_value,
                 'billing_data' => $order->billing,
+                'email_address' => $order->customer['email_address'],
                 'notes_link' => sprintf(
                     HTTP_SERVER . "/%s/%s|Store name: %s|Order #%s", $adm_folder_name->fields['configuration_value'],
                     'index.php?cmd=orders&origin=index&oID=' . $order_id . '&action=edit',
